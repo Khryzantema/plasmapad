@@ -9,9 +9,13 @@ Written in plain QML (no compiled plugin).
 
 ## Screenshots
 
-| Folders | Opened folder | Search |
+| Overview | Opened folder | Search |
 |:---:|:---:|:---:|
-| ![The folders](docs/screenshots/folders.png) | ![An opened folder](docs/screenshots/folder-open.png) | ![The search](docs/screenshots/search.png) |
+| ![The folders](docs/screenshots/overview.jpg) | ![An opened folder](docs/screenshots/folder.jpg) | ![The search](docs/screenshots/search.jpg) |
+
+| Recent apps | Context menu |
+|:---:|:---:|
+| ![The Recent folder](docs/screenshots/recent.jpg) | ![The context menu](docs/screenshots/context-menu.jpg) |
 
 ## Features
 
