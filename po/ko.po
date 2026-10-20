@@ -1,0 +1,75 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+msgid ""
+msgstr ""
+"Project-Id-Version: io.github.khryzantema.plasmapad\n"
+"Last-Translator: PlasmaPad contributors\n"
+"PO-Revision-Date: 2026-10-20 00:00+0000\n"
+"Language-Team: ko\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "General"
+msgstr "일반"
+
+msgid "Panel icon:"
+msgstr "패널 아이콘:"
+
+msgid "Choose…"
+msgstr "선택…"
+
+msgid "Reset to default icon"
+msgstr "기본 아이콘으로 초기화"
+
+msgid "Remove icon"
+msgstr "아이콘 제거"
+
+msgid "Icon size:"
+msgstr "아이콘 크기:"
+
+msgid "Fit to panel size"
+msgstr "패널 크기에 맞춤"
+
+msgid "Custom size:"
+msgstr "사용자 지정 크기:"
+
+msgid "%1 px"
+msgstr "%1 px"
+
+msgid "88 px"
+msgstr "88 px"
+
+msgid "Background:"
+msgstr "배경:"
+
+msgid "Blur only (hide the wallpaper)"
+msgstr "흐림 효과만 (배경 화면 숨기기)"
+
+msgid "Launcher icon size:"
+msgstr "실행기 아이콘 크기:"
+
+msgid "%1%"
+msgstr "%1%"
+
+msgid "888%"
+msgstr "888%"
+
+msgid "Favorites"
+msgstr "즐겨찾기"
+
+msgid "Recent"
+msgstr "최근 항목"
+
+msgid "Nothing here yet"
+msgstr "아직 아무것도 없습니다"
+
+msgid "Add to Favorites"
+msgstr "즐겨찾기에 추가"
+
+msgid "Remove from Favorites"
+msgstr "즐겨찾기에서 제거"
+
+msgid "Search"
+msgstr "검색"

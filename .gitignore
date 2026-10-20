@@ -1,0 +1,7 @@
+# Release packages built by package.sh
+*.plasmoid
+
+# Editor and OS files
+*~
+*.swp
+.DS_Store

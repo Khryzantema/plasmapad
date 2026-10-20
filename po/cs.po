@@ -1,0 +1,75 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+msgid ""
+msgstr ""
+"Project-Id-Version: io.github.khryzantema.plasmapad\n"
+"Last-Translator: PlasmaPad contributors\n"
+"PO-Revision-Date: 2026-10-20 00:00+0000\n"
+"Language-Team: cs\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+msgid "General"
+msgstr "Obecné"
+
+msgid "Panel icon:"
+msgstr "Ikona panelu:"
+
+msgid "Choose…"
+msgstr "Vybrat…"
+
+msgid "Reset to default icon"
+msgstr "Obnovit výchozí ikonu"
+
+msgid "Remove icon"
+msgstr "Odebrat ikonu"
+
+msgid "Icon size:"
+msgstr "Velikost ikony:"
+
+msgid "Fit to panel size"
+msgstr "Přizpůsobit velikosti panelu"
+
+msgid "Custom size:"
+msgstr "Vlastní velikost:"
+
+msgid "%1 px"
+msgstr "%1 px"
+
+msgid "88 px"
+msgstr "88 px"
+
+msgid "Background:"
+msgstr "Pozadí:"
+
+msgid "Blur only (hide the wallpaper)"
+msgstr "Pouze rozostření (skrýt tapetu)"
+
+msgid "Launcher icon size:"
+msgstr "Velikost ikon ve spouštěči:"
+
+msgid "%1%"
+msgstr "%1%"
+
+msgid "888%"
+msgstr "888%"
+
+msgid "Favorites"
+msgstr "Oblíbené"
+
+msgid "Recent"
+msgstr "Nedávné"
+
+msgid "Nothing here yet"
+msgstr "Zatím tu nic není"
+
+msgid "Add to Favorites"
+msgstr "Přidat do oblíbených"
+
+msgid "Remove from Favorites"
+msgstr "Odebrat z oblíbených"
+
+msgid "Search"
+msgstr "Hledat"

@@ -1,0 +1,75 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+msgid ""
+msgstr ""
+"Project-Id-Version: io.github.khryzantema.plasmapad\n"
+"Last-Translator: PlasmaPad contributors\n"
+"PO-Revision-Date: 2026-10-20 00:00+0000\n"
+"Language-Team: fr\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "General"
+msgstr "Général"
+
+msgid "Panel icon:"
+msgstr "Icône du tableau de bord :"
+
+msgid "Choose…"
+msgstr "Choisir…"
+
+msgid "Reset to default icon"
+msgstr "Réinitialiser l'icône par défaut"
+
+msgid "Remove icon"
+msgstr "Supprimer l'icône"
+
+msgid "Icon size:"
+msgstr "Taille de l'icône :"
+
+msgid "Fit to panel size"
+msgstr "Adapter à la taille du tableau de bord"
+
+msgid "Custom size:"
+msgstr "Taille personnalisée :"
+
+msgid "%1 px"
+msgstr "%1 px"
+
+msgid "88 px"
+msgstr "88 px"
+
+msgid "Background:"
+msgstr "Arrière-plan :"
+
+msgid "Blur only (hide the wallpaper)"
+msgstr "Flou uniquement (masquer le fond d'écran)"
+
+msgid "Launcher icon size:"
+msgstr "Taille des icônes du lanceur :"
+
+msgid "%1%"
+msgstr "%1 %"
+
+msgid "888%"
+msgstr "888 %"
+
+msgid "Favorites"
+msgstr "Favoris"
+
+msgid "Recent"
+msgstr "Récents"
+
+msgid "Nothing here yet"
+msgstr "Rien ici pour le moment"
+
+msgid "Add to Favorites"
+msgstr "Ajouter aux favoris"
+
+msgid "Remove from Favorites"
+msgstr "Retirer des favoris"
+
+msgid "Search"
+msgstr "Rechercher"

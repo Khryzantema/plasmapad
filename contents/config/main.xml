@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfggroup name="General">
+    <entry name="icon" type="String">
+      <label>The name of the icon used for the panel button</label>
+      <default>start-here-kde-symbolic</default>
+    </entry>
+    <entry name="autoIconSize" type="Bool">
+      <label>Whether the panel button icon follows the panel thickness</label>
+      <default>true</default>
+    </entry>
+    <entry name="favorites" type="StringList">
+      <label>Application ids pinned in the Favorites folder</label>
+      <default></default>
+    </entry>
+    <entry name="categoryUsage" type="String">
+      <label>JSON map of category name to the number of apps launched from it</label>
+      <default>{}</default>
+    </entry>
+    <entry name="blurOnly" type="Bool">
+      <label>Blur the desktop behind the launcher instead of showing the wallpaper</label>
+      <default>false</default>
+    </entry>
+    <entry name="launcherIconScale" type="Int">
+      <label>Size of the folders and app icons in the launcher, in percent</label>
+      <default>100</default>
+      <min>60</min>
+      <max>160</max>
+    </entry>
+    <entry name="iconSize" type="Int">
+      <label>The size in pixels of the panel button icon</label>
+      <default>32</default>
+      <min>16</min>
+      <max>64</max>
+    </entry>
+  </kcfggroup>
+</kcfg>

@@ -1,0 +1,75 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+msgid ""
+msgstr ""
+"Project-Id-Version: io.github.khryzantema.plasmapad\n"
+"Last-Translator: PlasmaPad contributors\n"
+"PO-Revision-Date: 2026-10-20 00:00+0000\n"
+"Language-Team: tr\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "General"
+msgstr "Genel"
+
+msgid "Panel icon:"
+msgstr "Panel simgesi:"
+
+msgid "Choose…"
+msgstr "Seç…"
+
+msgid "Reset to default icon"
+msgstr "Varsayılan simgeye sıfırla"
+
+msgid "Remove icon"
+msgstr "Simgeyi kaldır"
+
+msgid "Icon size:"
+msgstr "Simge boyutu:"
+
+msgid "Fit to panel size"
+msgstr "Panel boyutuna uydur"
+
+msgid "Custom size:"
+msgstr "Özel boyut:"
+
+msgid "%1 px"
+msgstr "%1 px"
+
+msgid "88 px"
+msgstr "88 px"
+
+msgid "Background:"
+msgstr "Arka plan:"
+
+msgid "Blur only (hide the wallpaper)"
+msgstr "Yalnızca bulanıklaştır (duvar kağıdını gizle)"
+
+msgid "Launcher icon size:"
+msgstr "Başlatıcı simge boyutu:"
+
+msgid "%1%"
+msgstr "%1%"
+
+msgid "888%"
+msgstr "888%"
+
+msgid "Favorites"
+msgstr "Sık kullanılanlar"
+
+msgid "Recent"
+msgstr "Son kullanılanlar"
+
+msgid "Nothing here yet"
+msgstr "Henüz burada bir şey yok"
+
+msgid "Add to Favorites"
+msgstr "Sık kullanılanlara ekle"
+
+msgid "Remove from Favorites"
+msgstr "Sık kullanılanlardan kaldır"
+
+msgid "Search"
+msgstr "Ara"

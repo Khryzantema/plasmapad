@@ -1,0 +1,75 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+msgid ""
+msgstr ""
+"Project-Id-Version: io.github.khryzantema.plasmapad\n"
+"Last-Translator: PlasmaPad contributors\n"
+"PO-Revision-Date: 2026-10-20 00:00+0000\n"
+"Language-Team: pt_BR\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Search"
+msgstr "Pesquisar"
+
+msgid "Favorites"
+msgstr "Favoritos"
+
+msgid "Recent"
+msgstr "Recentes"
+
+msgid "Nothing here yet"
+msgstr "Nada aqui ainda"
+
+msgid "Add to Favorites"
+msgstr "Adicionar aos favoritos"
+
+msgid "Remove from Favorites"
+msgstr "Remover dos favoritos"
+
+msgid "General"
+msgstr "Geral"
+
+msgid "Panel icon:"
+msgstr "Ícone do painel:"
+
+msgid "Choose…"
+msgstr "Escolher…"
+
+msgid "Reset to default icon"
+msgstr "Restaurar o ícone padrão"
+
+msgid "Remove icon"
+msgstr "Remover ícone"
+
+msgid "Icon size:"
+msgstr "Tamanho do ícone:"
+
+msgid "Fit to panel size"
+msgstr "Ajustar ao tamanho do painel"
+
+msgid "Custom size:"
+msgstr "Tamanho personalizado:"
+
+msgid "%1 px"
+msgstr "%1 px"
+
+msgid "88 px"
+msgstr "88 px"
+
+msgid "Background:"
+msgstr "Fundo:"
+
+msgid "Blur only (hide the wallpaper)"
+msgstr "Apenas desfoque (ocultar o wallpaper)"
+
+msgid "Launcher icon size:"
+msgstr "Tamanho dos ícones do launcher:"
+
+msgid "%1%"
+msgstr "%1%"
+
+msgid "888%"
+msgstr "888%"

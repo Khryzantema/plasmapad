@@ -1,0 +1,75 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+msgid ""
+msgstr ""
+"Project-Id-Version: io.github.khryzantema.plasmapad\n"
+"Last-Translator: PlasmaPad contributors\n"
+"PO-Revision-Date: 2026-10-20 00:00+0000\n"
+"Language-Team: it\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "General"
+msgstr "Generale"
+
+msgid "Panel icon:"
+msgstr "Icona del pannello:"
+
+msgid "Choose…"
+msgstr "Scegli…"
+
+msgid "Reset to default icon"
+msgstr "Ripristina l'icona predefinita"
+
+msgid "Remove icon"
+msgstr "Rimuovi icona"
+
+msgid "Icon size:"
+msgstr "Dimensione dell'icona:"
+
+msgid "Fit to panel size"
+msgstr "Adatta alla dimensione del pannello"
+
+msgid "Custom size:"
+msgstr "Dimensione personalizzata:"
+
+msgid "%1 px"
+msgstr "%1 px"
+
+msgid "88 px"
+msgstr "88 px"
+
+msgid "Background:"
+msgstr "Sfondo:"
+
+msgid "Blur only (hide the wallpaper)"
+msgstr "Solo sfocatura (nascondi lo sfondo)"
+
+msgid "Launcher icon size:"
+msgstr "Dimensione delle icone del lanciatore:"
+
+msgid "%1%"
+msgstr "%1%"
+
+msgid "888%"
+msgstr "888%"
+
+msgid "Favorites"
+msgstr "Preferiti"
+
+msgid "Recent"
+msgstr "Recenti"
+
+msgid "Nothing here yet"
+msgstr "Ancora niente qui"
+
+msgid "Add to Favorites"
+msgstr "Aggiungi ai preferiti"
+
+msgid "Remove from Favorites"
+msgstr "Rimuovi dai preferiti"
+
+msgid "Search"
+msgstr "Cerca"

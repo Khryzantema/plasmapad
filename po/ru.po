@@ -1,0 +1,75 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+msgid ""
+msgstr ""
+"Project-Id-Version: io.github.khryzantema.plasmapad\n"
+"Last-Translator: PlasmaPad contributors\n"
+"PO-Revision-Date: 2026-10-20 00:00+0000\n"
+"Language-Team: ru\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "General"
+msgstr "Основные"
+
+msgid "Panel icon:"
+msgstr "Значок на панели:"
+
+msgid "Choose…"
+msgstr "Выбрать…"
+
+msgid "Reset to default icon"
+msgstr "Сбросить значок по умолчанию"
+
+msgid "Remove icon"
+msgstr "Удалить значок"
+
+msgid "Icon size:"
+msgstr "Размер значка:"
+
+msgid "Fit to panel size"
+msgstr "По размеру панели"
+
+msgid "Custom size:"
+msgstr "Другой размер:"
+
+msgid "%1 px"
+msgstr "%1 px"
+
+msgid "88 px"
+msgstr "88 px"
+
+msgid "Background:"
+msgstr "Фон:"
+
+msgid "Blur only (hide the wallpaper)"
+msgstr "Только размытие (скрыть обои)"
+
+msgid "Launcher icon size:"
+msgstr "Размер значков в лаунчере:"
+
+msgid "%1%"
+msgstr "%1%"
+
+msgid "888%"
+msgstr "888%"
+
+msgid "Favorites"
+msgstr "Избранное"
+
+msgid "Recent"
+msgstr "Недавние"
+
+msgid "Nothing here yet"
+msgstr "Здесь пока ничего нет"
+
+msgid "Add to Favorites"
+msgstr "Добавить в избранное"
+
+msgid "Remove from Favorites"
+msgstr "Удалить из избранного"
+
+msgid "Search"
+msgstr "Поиск"

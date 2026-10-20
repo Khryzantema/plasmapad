@@ -1,0 +1,30 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Klaus",
+                "Email": "klausdelimaluiz@proton.me"
+            }
+        ],
+        "Category": "Application Launchers",
+        "Description": "macOS Launchpad-style full-screen application launcher for KDE Plasma 6, with category folders, blurred wallpaper background and instant search",
+        "FormFactors": [
+            "horizontal",
+            "vertical",
+            "planar"
+        ],
+        "Icon": "start-here-kde",
+        "Id": "io.github.khryzantema.plasmapad",
+        "License": "GPL-2.0-or-later",
+        "Name": "PlasmaPad",
+        "Version": "0.1.0",
+        "Name[pt_BR]": "PlasmaPad",
+        "Description[pt_BR]": "Lançador de aplicativos em tela cheia no estilo Launchpad do macOS para o KDE Plasma 6, com pastas por categoria, fundo com o wallpaper desfocado e busca instantânea"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-NotificationArea": false,
+    "X-Plasma-Provides": [
+        "org.kde.plasma.launchermenu"
+    ]
+}

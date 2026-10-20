@@ -1,0 +1,75 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+msgid ""
+msgstr ""
+"Project-Id-Version: io.github.khryzantema.plasmapad\n"
+"Last-Translator: PlasmaPad contributors\n"
+"PO-Revision-Date: 2026-10-20 00:00+0000\n"
+"Language-Team: nl\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "General"
+msgstr "Algemeen"
+
+msgid "Panel icon:"
+msgstr "Paneelpictogram:"
+
+msgid "Choose…"
+msgstr "Kiezen…"
+
+msgid "Reset to default icon"
+msgstr "Standaardpictogram herstellen"
+
+msgid "Remove icon"
+msgstr "Pictogram verwijderen"
+
+msgid "Icon size:"
+msgstr "Pictogramgrootte:"
+
+msgid "Fit to panel size"
+msgstr "Aanpassen aan paneelgrootte"
+
+msgid "Custom size:"
+msgstr "Aangepaste grootte:"
+
+msgid "%1 px"
+msgstr "%1 px"
+
+msgid "88 px"
+msgstr "88 px"
+
+msgid "Background:"
+msgstr "Achtergrond:"
+
+msgid "Blur only (hide the wallpaper)"
+msgstr "Alleen vervaging (achtergrondafbeelding verbergen)"
+
+msgid "Launcher icon size:"
+msgstr "Pictogramgrootte in de starter:"
+
+msgid "%1%"
+msgstr "%1%"
+
+msgid "888%"
+msgstr "888%"
+
+msgid "Favorites"
+msgstr "Favorieten"
+
+msgid "Recent"
+msgstr "Recent"
+
+msgid "Nothing here yet"
+msgstr "Hier is nog niets"
+
+msgid "Add to Favorites"
+msgstr "Aan favorieten toevoegen"
+
+msgid "Remove from Favorites"
+msgstr "Uit favorieten verwijderen"
+
+msgid "Search"
+msgstr "Zoeken"
