@@ -2,8 +2,10 @@
 
 import QtQuick
 import QtQuick.Effects
+import QtQml.Models
 
 import org.kde.kirigami as Kirigami
+import org.kde.plasma.private.kicker as Kicker
 
 // The launcher layout. From back to front: the search bar, the folder grid (replaced by the
 // results while there is a search), the opened folder, and the context menu.
@@ -78,6 +80,92 @@ Item {
         }
     }
 
+    // "Lost & Found": the apps of the flat "all applications" list that no category folder shows.
+    // `known` holds the names found in the categories; it is rebuilt once the folders are ready.
+    property var known: ({})
+    property var allApps: null
+
+    function updateLost() {
+        const names = {};
+        for (let row = 0; row < rootModel.count; ++row) {
+            const model = rootModel.modelForRow(row);
+            for (let i = 0; model && i < model.count; ++i) {
+                names[String(model.data(model.index(i, 0), Qt.DisplayRole))] = true;
+            }
+        }
+        known = names;
+        lostModel.invalidate();
+        folders.lostCount = lostModel.rowCount();
+    }
+
+    // Launches or acts on an app of any folder; Lost & Found rows must be mapped back to the flat list.
+    function triggerRow(model, row, actionId, actionArgument) {
+        if (model === lostModel) {
+            const source = lostModel.mapToSource(lostModel.index(row, 0));
+            return allAppsModel.modelForRow(0).trigger(source.row, actionId, actionArgument);
+        }
+        return model.trigger(row, actionId, actionArgument);
+    }
+
+    Kicker.RootModel {
+        id: allAppsModel
+
+        autoPopulate: false
+        appletInterface: root.applet
+        showAllApps: true
+        showAllAppsCategorized: false
+        showTopLevelItems: false
+        showRecentApps: false
+        showRecentDocs: false
+        showRecentFolders: false
+        showPowerSession: false
+        showFavoritesPlaceholder: false
+
+        Component.onCompleted: refresh()
+        onRefreshed: root.allApps = null
+    }
+
+    // Sub-models only exist once a row has been visited (see FolderGrid).
+    Repeater {
+        model: allAppsModel
+        delegate: Item {
+            width: 0
+            height: 0
+        }
+    }
+
+    Timer {
+        interval: 200
+        repeat: true
+        running: root.allApps === null
+        onTriggered: root.allApps = allAppsModel.modelForRow(0)
+    }
+
+    SortFilterProxyModel {
+        id: lostModel
+
+        model: root.allApps
+        filters: FunctionFilter {
+            component Data: QtObject {
+                property string display
+            }
+            function filter(data: Data): bool {
+                return root.known[data.display] !== true;
+            }
+        }
+        onModelChanged: Qt.callLater(root.updateLost)
+    }
+
+    Connections {
+        target: folders
+
+        function onRevisionChanged() {
+            if (folders.revision === 40) {
+                root.updateLost();
+            }
+        }
+    }
+
     // Finds the folder that contains an app, for counting its use. Search results do not say
     // which folder they came from, so it is matched by name (exact first, then partial).
     function categoryOf(name) {
@@ -128,7 +216,7 @@ Item {
             return;
         }
         const model = context.model;
-        if (model && model.trigger(context.row, actionId, actionArgument)) {
+        if (model && root.triggerRow(model, context.row, actionId, actionArgument)) {
             appLaunched("");
         }
     }
@@ -139,6 +227,7 @@ Item {
         target: root.rootModel
 
         function onRefreshed() {
+            allAppsModel.refresh();
             folders.current = folders.none;
             folderPanel.close();
         }
@@ -199,6 +288,7 @@ Item {
         rootModel: root.rootModel
         favoritesModel: root.favoritesModel
         recentModel: root.recentModel
+        lostModel: lostModel
         usage: root.usage
         tileSize: root.tileSize
         enabled: !folderPanel.opened && !root.searching
@@ -232,7 +322,7 @@ Item {
 
         onCloseRequested: close()
         onAppClicked: row => {
-            appsModel.trigger(row, "", null);
+            root.triggerRow(appsModel, row, "", null);
             // Favorites and Recent are not categories, so launching from them is not counted.
             root.appLaunched(special ? "" : label);
         }

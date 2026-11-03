@@ -17,7 +17,7 @@ Item {
     // Shown as selected (keyboard navigation).
     property bool highlighted: false
 
-    readonly property int previewCount: Math.min(9, appsModel ? appsModel.count : 0)
+    readonly property int previewCount: Math.min(9, appsModel ? (appsModel.count ?? appsModel.rowCount()) : 0)
 
     signal clicked()
 

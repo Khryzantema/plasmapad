@@ -13,6 +13,10 @@ Flickable {
     required property var rootModel
     property var favoritesModel: null
     property var recentModel: null
+    // Apps that belong to no category ("Lost & Found"), and how many there are; the folder only
+    // exists while there is at least one.
+    property var lostModel: null
+    property int lostCount: 0
     property var usage: ({})
     property int tileSize: 120
 
@@ -24,19 +28,20 @@ Flickable {
     // (it cannot be -1, which is Favorites).
     readonly property int favoritesId: -1
     readonly property int recentId: -2
+    readonly property int lostId: -3
     readonly property int none: -100
 
     // The folder selected with the keyboard, or `none`.
     property int current: none
 
     readonly property int cellHeight: Math.round(cellWidth * 1.12)
-    readonly property int folderCount: rootModel.count + 2
+    readonly property int folderCount: rootModel.count + 2 + (lostCount > 0 ? 1 : 0)
     readonly property int columns: Math.max(1, Math.min(folderCount, cellWidth > 0 ? Math.floor(maxWidth / cellWidth) : 1))
     readonly property int rows: Math.ceil(folderCount / columns)
 
     // The folder ids of each row. Favorites and Recent take the center of the top row and the
     // categories fan out from there, the most used first (natural order while nothing is used yet).
-    readonly property var layout: buildLayout(columns, usage)
+    readonly property var layout: buildLayout(columns, usage, lostCount)
 
     // Sub-models are only available once a view has visited the row, so tiles are bound to
     // `revision` (bumped while polling) and `generation` (bumped when the app list is rebuilt, which
@@ -51,11 +56,11 @@ Flickable {
     }
 
     function labelFor(id) {
-        return id === favoritesId ? i18n("Favorites") : id === recentId ? i18n("Recent") : rootModel.labelForRow(id);
+        return id === favoritesId ? i18n("Favorites") : id === recentId ? i18n("Recent") : id === lostId ? i18n("Lost & Found") : rootModel.labelForRow(id);
     }
 
     function modelFor(id) {
-        return id === favoritesId ? favoritesModel : id === recentId ? recentModel : rootModel.modelForRow(id);
+        return id === favoritesId ? favoritesModel : id === recentId ? recentModel : id === lostId ? lostModel : rootModel.modelForRow(id);
     }
 
     // Arranges items, sorted by priority, so the first goes in the middle and the next ones
@@ -73,7 +78,7 @@ Flickable {
     }
 
     // Splits all folders into rows of `perRow` and arranges every row center-out.
-    function buildLayout(perRow, usageMap) {
+    function buildLayout(perRow, usageMap, lost) {
         const categories = [];
         let total = 0;
         for (let row = 0; row < rootModel.count; ++row) {
@@ -85,7 +90,7 @@ Flickable {
         if (total > 0) {
             categories.sort((a, b) => b.score - a.score || a.row - b.row);
         }
-        const ordered = [favoritesId, recentId].concat(categories.map(category => category.row));
+        const ordered = [favoritesId, recentId].concat(categories.map(category => category.row), lostCount > 0 ? [lostId] : []);
 
         // `perRow` is 0 while the grid has no size yet; a zero step would loop forever.
         const step = Math.max(1, perRow);

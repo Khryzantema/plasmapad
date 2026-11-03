@@ -1,13 +1,14 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 import QtQuick
+import QtQuick.Window
 
 import org.kde.plasma.core as PlasmaCore
 
 // Default window: a full-screen, background-less Plasma dialog. Unlike Kicker.DashboardWindow it
 // does not ask KWin to blur everything behind it, so the desktop stays sharp until the wallpaper
 // fades in (and after it fades out). It is kept above other windows and covers the panels.
-PlasmaCore.Dialog {
+Window {
     id: root
 
     // Same interface as LaunchpadBlurWindow; see LaunchpadContent for what each one is.
@@ -32,35 +33,29 @@ PlasmaCore.Dialog {
             return;
         }
         opened = true;
-        visible = true;
+        visibility = Window.FullScreen;
     }
 
     function close() {
         opened = false;
     }
 
-    location: PlasmaCore.Types.Floating
-    type: PlasmaCore.Dialog.Normal
-    backgroundHints: PlasmaCore.Types.NoBackground
-    flags: Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint
+    color: "transparent"
+    flags: Qt.Window | Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint
     visible: false
-
-    x: screenGeometry.x
-    y: screenGeometry.y
+    screen: Qt.application.screens.find(s => s.virtualX === screenGeometry.x && s.virtualY === screenGeometry.y) ?? screen
 
     onVisibleChanged: {
         if (visible) {
             content.prepare();
-            requestActivate();
+            root.requestActivate();
         } else {
             content.reset();
         }
     }
 
-    // The dialog sizes itself from its main item.
-    mainItem: Item {
-        implicitWidth: root.screenGeometry.width
-        implicitHeight: root.screenGeometry.height
+    Item {
+        anchors.fill: parent
 
         LaunchpadContent {
             id: content
@@ -79,7 +74,7 @@ PlasmaCore.Dialog {
 
             onCloseRequested: root.close()
             onAppUsed: category => root.appUsed(category)
-            onFadedOut: root.visible = false
+            onFadedOut: root.visibility = Window.Hidden
         }
     }
 }

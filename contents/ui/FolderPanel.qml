@@ -101,7 +101,7 @@ Item {
         id: panel
 
         // The panel fits its content: up to six apps per row, as many rows as needed.
-        readonly property int count: root.appsModel ? root.appsModel.count : 1
+        readonly property int count: root.appsModel ? (root.appsModel.count ?? root.appsModel.rowCount()) : 1
         readonly property int columns: Math.max(1, Math.min(count, 6))
         readonly property int rows: Math.max(1, Math.ceil(count / columns))
 
